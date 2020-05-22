@@ -37,5 +37,5 @@
         - EditDelete.js (Stateful: this.state.isEditing, this.state.userInput)
 
 ## Wireframe
-<img src='./Screenshots/Capture1' alt='image1'>
-<img src='./Screenshots/Capture2' alt='image2'>
+<img src='./Screenshots/Capture1.png' alt='image1'>
+<img src='./Screenshots/Capture2.png' alt='image2'>
