@@ -13,7 +13,13 @@ class App extends Component {
     this.state = {
       racersAndLapTimes: []
     }
-    //bind all functions here
+    
+    this.addNewRacer = this.addNewRacer.bind(this)
+    this.editLapTimes = this.editLapTimes.bind(this)
+    this.clearLapTimes = this.clearLapTimes.bind(this)
+    this.addLap = this.addLap.bind(this)
+    this.clearBoard = this.clearBoard.bind(this)
+    this.deleteRacer = this.deleteRacer.bind(this)
   }
   
   componentDidMount(){
@@ -80,6 +86,8 @@ class App extends Component {
     return(
       <div className="App">
       <Header/>
+      <Lapboard/>
+      <Racers/>
       </div>
     )
   };
