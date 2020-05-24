@@ -9,13 +9,15 @@ class Lapboard extends Component{
         }
     }
 
+
+
     
     
     
     render(){
         return(
             <div>
-                <h3>Hey</h3>
+                <button onClick= {this.props.addLap}>addLap</button>
                 <h4><AddRacer/></h4>
             </div>
         )

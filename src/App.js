@@ -86,8 +86,13 @@ class App extends Component {
     return(
       <div className="App">
       <Header/>
-      <Lapboard/>
+      <Lapboard 
+        addLap = {this.addLap}
+        clearBoard = {this.clearBoard}
+        AddRacer = {this.AddRacer}
+      />
       <Racers/>
+      <p>console.log(racersAndLapTimes)</p>
       </div>
     )
   };
