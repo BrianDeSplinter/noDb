@@ -24,9 +24,8 @@ class App extends Component {
     })
   }
 
-  addNewRacer(racer){
-    const body = {racer}
-    axios.post('/api/scoreboard', body).then((res) => {
+  addNewRacer(){
+    axios.post('/api/scoreboard').then((res) => {
       this.setState({
         racersAndLapTimes: res.data
       })
@@ -35,32 +34,43 @@ class App extends Component {
 
   editLapTimes(id, updatedRacer){
     const body = {updatedRacer}
-    axios.put(`/api/scoreboard/${id}`, body).then((res) => {
+    axios.put(`/api/scoreboard/edit/${id}`, body).then((res) => {
+      this.setState({
+        racersAndLapTimes: res.data
+      })
+    }).catch(err => console.log(err))
+  }
+
+  clearLapTimes(id){
+    axios.put(`/api/scoreboard/clear/${id}`).then((res) => {
+      this.setState({
+        racersAndLapTimes: res.data
+      })
+    }).catch(err => console.log(err))
+  }
+
+  addLap(){
+    axios.put('/api/scoreboard/addlap').then((res) => {
       this.setState({
         racersAndLapTimes: res.data
       })
     })
   }
 
-  clearLapTimes(id, updatedRacer){
-    const body = {updatedRacer}
-    axios.put(`/api/scoreboard/${id}`, body).then((res) => {
+  clearBoard(){
+    axios.put('api/scoreboard/clearboard').then((res) => {
       this.setState({
         racersAndLapTimes: res.data
       })
     })
   }
-
-  addLap(){}
-
-  clearBoard(){}
 
   deleteRacer(id){
     axios.delete(`/api/scoreboard/${id}`).then((res) => {
       this.setState({
         racersAndLapTimes: res.data
       })
-    })
+    }).catch(err => console.log(err))
   }
   
   
