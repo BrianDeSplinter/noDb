@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import Header from './components/Header'
 import Lapboard from './components/Lapboard'
-//import AddRacer from './components/AddRacer'
 import Racers from './components/Racers'
-//import EditDelete from './components/EditDelete'
 import axios from 'axios'
 import './App.css';
 
@@ -77,9 +75,6 @@ class App extends Component {
       })
     }).catch(err => console.log(err))
   }
-  
-  
-  
   
   render() {
     return(

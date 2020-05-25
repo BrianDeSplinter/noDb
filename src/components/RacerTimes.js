@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 
-//editLapTimes = {props.clearLapTimes}
-
 class RacerTimes extends Component{
     constructor(){
         super()
@@ -32,11 +30,10 @@ class RacerTimes extends Component{
         this.props.editLapTimes(racer.id, edited)
         this.toggleEdit()
     }
+
     render(){
         return(
           <div> 
-           
-           
             <div>
                 {!this.state.isEditing ? (
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', backgroundColor: 'rgb(165, 165, 165)', margin: '10px'}}>
@@ -52,12 +49,6 @@ class RacerTimes extends Component{
                 </div>
             )}
             </div>
-        
-        
-        
-                
-        
-        
         </div>
         )
     }

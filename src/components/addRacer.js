@@ -1,12 +1,7 @@
 import React from 'react'
 import '../App.css';
 
-
-
-
-
 function AddRacer(props){
-
 
     return(
         <div className= 'top-buttons'>

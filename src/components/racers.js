@@ -2,9 +2,6 @@ import React from 'react'
 import EditDelete from './EditDelete'
 import RacerTimes from './RacerTimes'
 
-
-
-
 function Racers(props){
     const racermap = props.racers.map((person) => (
         <EditDelete
@@ -23,8 +20,6 @@ function Racers(props){
         />
     ))
 
-
-
     return(
         <div style={{display:'flex', flexDirection:'row'}}>
             <div>{racermap}</div>
@@ -33,7 +28,6 @@ function Racers(props){
             </h3>
         </div>
     )
-
 }
 
 export default Racers

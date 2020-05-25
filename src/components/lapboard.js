@@ -9,28 +9,18 @@ class Lapboard extends Component{
         }
     }
 
-
-
-    
-    
-    
     render(){
         return(
             <div>
-                
                 <h4><AddRacer 
                     addLap= {this.props.addLap}
                     clearBoard = {this.props.clearBoard}
                     addNewRacer = {this.props.addNewRacer}
                     />
                 </h4>
-                
             </div>
         )
     }
 }
-
-
-
 
 export default Lapboard

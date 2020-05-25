@@ -34,7 +34,6 @@ class EditDelete extends Component{
     }
 
     render(){
-      
         return(
             <div key={this.props.racer.id} style={{display:'flex', flexDirection:'row', marginTop: '25px'}}>
                 <div style={{display:'flex', flexDirection:'column', height: '40px'}}>
