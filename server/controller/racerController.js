@@ -1,5 +1,6 @@
 const data = require('../data')
 let id = 3
+let laps = data[0].times.length
 
 module.exports = {
     getRacers: (req, res) => {
@@ -7,12 +8,14 @@ module.exports = {
     },
 
     addRacer: (req,res) => {
-        const laps = data[0].times.length
         const newRacer = {
             id, 
             name: 'NewRacer',
             times: []
         }
+        if(laps=== undefined) {
+            let laps = 5
+        }   
 
         for(let i = 0; i < laps; i++){
             newRacer.times.push('_:_:_')
