@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
 
+//editLapTimes = {props.clearLapTimes}
+//clearLapTimes = {props.clearLapTimes}
+//deleteRacer = {props.deleteRacer}
+
 class EditDelete extends Component{
     constructor(){
         super()
@@ -9,13 +13,26 @@ class EditDelete extends Component{
         }
     }
 
+    toggleEdit(){
+        this.setState({
+            isEditing: !this.state.isEditing
+        })
+    }
+
+    handleChange(e){
+        this.setState({
+            userInput: e.target.value
+        })
+    }
+
 
     render(){
         return(
-            <div>
+            <div key={this.props.racer.id}>
+                <button onClick={() => this.props.deleteRacer(this.props.racer.id)}>Delete Racer</button>
                 <h1>{this.props.racer.name}</h1>
                 <h2>{this.props.racer.id}</h2>
-                <h3>{this.props.racer.times.map(e => {return <div>{e}</div>})}</h3>
+                <h3 style={{height: '40px', width: '65px', display: 'flex', flexDrection: 'row', justifyContent: 'space-between', backgroundColor: 'green'}}>{this.props.racer.times.map(e => {return <div>{e}</div>})}</h3>
             </div>
         )
     }

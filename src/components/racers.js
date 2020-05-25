@@ -1,6 +1,9 @@
 import React from 'react'
 import EditDelete from './EditDelete'
 
+
+
+
 function Racers(props){
     const racermap = props.racers.map((person) => (
         <EditDelete
@@ -9,6 +12,9 @@ function Racers(props){
             clear = {props.clearLapTimes}
             delete = {props.deleteRacer}
             racer = {person}
+            editLapTimes = {props.clearLapTimes}
+            clearLapTimes = {props.clearLapTimes}
+            deleteRacer = {props.deleteRacer}
         />
     ))
 
@@ -16,7 +22,6 @@ function Racers(props){
 
     return(
         <div>
-            <h4>racers</h4>
             <div>{racermap}</div>
         </div>
     )
