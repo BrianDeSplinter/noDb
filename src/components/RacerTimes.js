@@ -7,7 +7,7 @@ class RacerTimes extends Component{
         super()
         this.state= {
             isEditing: false,
-            times: ''
+            userInput: []
         }
     }
 
@@ -45,7 +45,7 @@ class RacerTimes extends Component{
                     <button onClick={() => this.toggleEdit()}>Edit Lap Times</button>
                 </div>
             ) : (
-                <div style={{display:'flex', flexDirection:'column'}}>{this.props.racer.times.map((e,i) => <input onChange={(event) => this.handleChange(event)} value={this.props.racer.times[i]}/>)}
+                <div style={{display:'flex', flexDirection:'column'}}><input onChange={(event) => this.handleChange(event)} placeholder={this.props.racer.times}/>
                     
                     <button onClick={() => this.handleSaveTimes()}>Confirm Time Changes</button>
                     <button onClick={() => this.toggleEdit()}>Cancel Time Changes</button>
@@ -64,3 +64,6 @@ class RacerTimes extends Component{
 }
 
 export default RacerTimes
+
+
+//1:55:55, 1:56:56, 1:57:57, 1:58:58, 1:59:59
