@@ -5,7 +5,7 @@ class Lapboard extends Component{
     constructor(){
         super()
         this.state = {
-            laptimes: 5
+            laptimes: 5,
         }
     }
 
@@ -17,8 +17,14 @@ class Lapboard extends Component{
     render(){
         return(
             <div>
-                <button onClick= {this.props.addLap}>addLap</button>
-                <h4><AddRacer/></h4>
+                
+                <h4><AddRacer 
+                    addLap= {this.props.addLap}
+                    clearBoard = {this.props.clearBoard}
+                    addNewRacer = {this.props.addNewRacer}
+                    />
+                </h4>
+                
             </div>
         )
     }

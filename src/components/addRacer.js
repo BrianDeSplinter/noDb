@@ -4,12 +4,16 @@ import React from 'react'
 
 
 
-function AddRacer(){
+function AddRacer(props){
 
 
 
     return(
-        <p>wazz uppp!</p>
+        <div>
+            <button onClick= {() => props.addLap()}>Add New Lap</button>
+            <button onClick= {() => props.clearBoard()}>Clear Board</button>
+            <button onClick= {() => props.addNewRacer()}>Add New Racer</button>
+        </div>
     )
 }
 
