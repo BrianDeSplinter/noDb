@@ -35,8 +35,13 @@ module.exports = {
             res.status(404).send('Racer not found :(')
         }
 
-        data[index].name = newName
-        data[index].times = times
+        if(newName != null){
+            data[index].name = newName
+        } 
+
+        if(times != null){
+            data[index].times = times
+        }
 
         res.status(202).send(data)
     },

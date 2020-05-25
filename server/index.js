@@ -7,7 +7,7 @@ app.use(express.json())
 
 app.get('/api/scoreboard', ctrl.getRacers)
 app.post('/api/scoreboard', ctrl.addRacer)
-app.put('/api/scoreboard/edit/:racer_id', ctrl.editLapTimes) 
+app.patch('/api/scoreboard/edit/:racer_id', ctrl.editLapTimes) 
 app.put('/api/scoreboard/clear/:racer_id', ctrl.clearLapTimes) 
 app.put('/api/scoreboard/addlap', ctrl.addLap) 
 app.put('/api/scoreboard/clearboard', ctrl.clearBoard)
