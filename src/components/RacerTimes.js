@@ -27,7 +27,7 @@ class RacerTimes extends Component{
         const {racer} = this.props
         const edited = {
             "newName": null,
-            "times": this.state.userInput
+            "times": this.state.userInput.split(', ')
         }
         this.props.editLapTimes(racer.id, edited)
         this.toggleEdit()
