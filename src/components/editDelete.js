@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import RacerTimes from './RacerTimes'
 
 //editLapTimes = {props.clearLapTimes}
 //clearLapTimes = {props.clearLapTimes}
@@ -26,6 +27,7 @@ class EditDelete extends Component{
     }
 
     render(){
+      
         return(
             <div key={this.props.racer.id}>
                 <button 
@@ -38,7 +40,6 @@ class EditDelete extends Component{
                 </button>
                 <h1>{this.props.racer.name}</h1>
                 <h2>{this.props.racer.id}</h2>
-                <h3 style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>{this.props.racer.times.map(e => {return <div style={{height: '40px', width: '65px', backgroundColor: 'green'}}>{e}</div>})}</h3>
             </div>
         )
     }
