@@ -50,13 +50,13 @@ class EditDelete extends Component{
  
                 </div>
                 <div>
-                {!this.state.isEditing ? (<h1>{this.props.racer.name}</h1>) : (
-          <div style={{display:'flex', flexDirection:'column'}}>
-            <input onChange={(e) => this.handleChange(e)} placeholder={this.props.racer.name}/>
-            <button onClick={() => this.handleSaveName()}>Confirm Name Change</button>
-            <button onClick={() => this.toggleEdit()}>Cancel Name Change</button>
-          </div>
-        )}
+                    {!this.state.isEditing ? (<h1>{this.props.racer.name}</h1>) : (
+                        <div style={{display:'flex', flexDirection:'column'}}>
+                            <input onChange={(e) => this.handleChange(e)} placeholder={this.props.racer.name}/>
+                            <button onClick={() => this.handleSaveName()}>Confirm Name Change</button>
+                            <button onClick={() => this.toggleEdit()}>Cancel Name Change</button>
+                        </div>
+                    )}
                 </div>
             </div>
         )
