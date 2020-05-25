@@ -1,3 +1,25 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: lightgrey;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
+
+button{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(184, 184, 184);
+  border-radius: 5px;
+  border-color: rgb(165, 165, 165);
+  border-width: 1px;
+}
+
+.top-buttons button{
+  margin: 10px;
+
 }

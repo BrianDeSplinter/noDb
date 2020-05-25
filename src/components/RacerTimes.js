@@ -39,8 +39,8 @@ class RacerTimes extends Component{
            
             <div>
                 {!this.state.isEditing ? (
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between'}}>
-                {this.props.racer.times.map(e => {return <div style={{height: '40px', width: '65px', backgroundColor: 'green'}}>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent:'space-between', backgroundColor: 'rgb(165, 165, 165)', margin: '10px'}}>
+                {this.props.racer.times.map(e => {return <div style={{height: '40px', width: '65px', margin: '15px'}}>
                     {e}</div>})}
                     <button onClick={() => this.toggleEdit()}>Edit Lap Times</button>
                 </div>

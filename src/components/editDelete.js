@@ -36,8 +36,8 @@ class EditDelete extends Component{
     render(){
       
         return(
-            <div key={this.props.racer.id} style={{display:'flex', flexDirection:'row'}}>
-                <div style={{display:'flex', flexDirection:'column'}}>
+            <div key={this.props.racer.id} style={{display:'flex', flexDirection:'row', marginTop: '25px'}}>
+                <div style={{display:'flex', flexDirection:'column', height: '40px'}}>
                     <button 
                         onClick={() => {if(window.confirm(`Are you sure you wish to delete ${this.props.racer.name}?`)){this.props.deleteRacer(this.props.racer.id)};}}
                         >Delete Racer
