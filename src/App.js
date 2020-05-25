@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
-import axios from 'axios'
 import Header from './components/Header'
 import Lapboard from './components/Lapboard'
 import AddRacer from './components/AddRacer'
 import Racers from './components/Racers'
 import EditDelete from './components/EditDelete'
+import axios from 'axios'
 import './App.css';
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      racersAndLapTimes: []
+    racersAndLapTimes: []
     }
     
     this.addNewRacer = this.addNewRacer.bind(this)
@@ -26,8 +26,9 @@ class App extends Component {
     axios.get('/api/scoreboard').then((res) => {
       this.setState({
         racersAndLapTimes: res.data
-      })
+      }) 
     })
+     console.log(this.state.racersAndLapTimes)
   }
 
   addNewRacer(){
@@ -87,15 +88,21 @@ class App extends Component {
       <div className="App">
       <Header/>
       <Lapboard 
+        racersAndLapTimes = {this.state.racersAndLapTimes}
         addLap = {this.addLap}
         clearBoard = {this.clearBoard}
-        AddRacer = {this.AddRacer}
+        addNewRacer = {this.addNewRacer}
       />
-      <Racers/>
-      <p>console.log(racersAndLapTimes)</p>
+      <Racers
+        racers = {this.state.racersAndLapTimes}
+        editLapTimes = {this.clearLapTimes}
+        clearLapTimes = {this.clearLapTimes}
+        deleteRacer = {this.deleteRacer}
+      />
+      <p>{console.log(this.state.racersAndLapTimes)}</p>
       </div>
     )
   };
 }
 
-export default App;
+export default App
