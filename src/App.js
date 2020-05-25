@@ -41,7 +41,7 @@ class App extends Component {
 
   editLapTimes(id, updatedRacer){
     const body = {updatedRacer}
-    axios.put(`/api/scoreboard/edit/${id}`, body).then((res) => {
+    axios.patch(`/api/scoreboard/edit/${id}`, body).then((res) => {
       this.setState({
         racersAndLapTimes: res.data
       })
