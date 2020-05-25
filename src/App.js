@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Header from './components/Header'
 import Lapboard from './components/Lapboard'
-import AddRacer from './components/AddRacer'
+//import AddRacer from './components/AddRacer'
 import Racers from './components/Racers'
-import EditDelete from './components/EditDelete'
+//import EditDelete from './components/EditDelete'
 import axios from 'axios'
 import './App.css';
 
@@ -28,7 +28,6 @@ class App extends Component {
         racersAndLapTimes: res.data
       }) 
     })
-     console.log(this.state.racersAndLapTimes)
   }
 
   addNewRacer(){
@@ -40,8 +39,7 @@ class App extends Component {
   }
 
   editLapTimes(id, updatedRacer){
-    const body = {updatedRacer}
-    axios.patch(`/api/scoreboard/edit/${id}`, body).then((res) => {
+    axios.patch(`/api/scoreboard/edit/${id}`, updatedRacer).then((res) => {
       this.setState({
         racersAndLapTimes: res.data
       })
@@ -95,11 +93,10 @@ class App extends Component {
       />
       <Racers
         racers = {this.state.racersAndLapTimes}
-        editLapTimes = {this.clearLapTimes}
+        editLapTimes = {this.editLapTimes}
         clearLapTimes = {this.clearLapTimes}
         deleteRacer = {this.deleteRacer}
       />
-      <p>{console.log(this.state.racersAndLapTimes)}</p>
       </div>
     )
   };

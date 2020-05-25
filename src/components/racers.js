@@ -9,11 +9,8 @@ function Racers(props){
     const racermap = props.racers.map((person) => (
         <EditDelete
             key= {person.id}
-            edit= {props.editLapTimes}
-            clear = {props.clearLapTimes}
-            delete = {props.deleteRacer}
             racer = {person}
-            editLapTimes = {props.clearLapTimes}
+            editLapTimes = {props.editLapTimes}
             clearLapTimes = {props.clearLapTimes}
             deleteRacer = {props.deleteRacer}
         />
@@ -22,6 +19,7 @@ function Racers(props){
     const timesTable = props.racers.map((e) =>(
         <RacerTimes
             racer = {e}
+            editLapTimes = {props.editLapTimes}
         />
     ))
 
@@ -32,7 +30,7 @@ function Racers(props){
             <div>{racermap}</div>
             <h3 style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                     {timesTable}
-                </h3>
+            </h3>
         </div>
     )
 
